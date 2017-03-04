@@ -1,21 +1,23 @@
 {
-  "name": "SendEMail",
+  "name": "AirportAPI",
   "version": "0.0.1",
   "author": "Jonathan Fu",
-  "description": "A simple Email sending Application",
+  "description": "A simple Airport API NodeJS Application",
   "scripts": {
-    "start": "node ./app"
+    "start": "node app.js",
+    "test": "node test.js"
   },
   "dependencies": {
-    "body-parser": "*",
+    "aws-sdk": "^2.22.0",
+    "body-parser": "^1.15.0",
     "express": "^4.14.0",
-    "jade": "*",
-    "mailgun-js": "^0.7.10",
-    "method-override": "*",
-    "morgan": "*",
-    "sendgrid": "^4.7.1",
-    "serve-favicon": "*",
-    "stylus": "*"
+    "method-override": "~2.3.0",
+    "promise": "^7.1.1",
+    "request": "^2.69.0"
+  },
+  "devDependencies": {
+    "jasmine": "^2.5.0",
+    "jasmine-spec-reporter": "^2.7.0"
   },
   "license": "MIT",
   "engines": {
