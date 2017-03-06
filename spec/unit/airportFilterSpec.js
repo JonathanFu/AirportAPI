@@ -33,7 +33,7 @@ describe('Test controller/airportFilterCtrl.js', function() {
   });
 
 
-  it("Should return airport data while calling AirportFilter.filterByQuery with invalid airport code[XXXX]", function (done) {
+  it("Should return no data while calling AirportFilter.filterByQuery with invalid airport code[XXXX]", function (done) {
     var code = req.query.code = 'XXXX';
 
     res.json = function (data) {
