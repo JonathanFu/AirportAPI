@@ -2,7 +2,7 @@
   "name": "AirportAPI",
   "version": "0.0.1",
   "author": "Jonathan Fu",
-  "description": "A simple Airport API NodeJS Application",
+  "description": "A simple Airport NodeJS API",
   "scripts": {
     "start": "node app.js",
     "test": "node test.js"

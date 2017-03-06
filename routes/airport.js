@@ -1,18 +1,17 @@
-var AirportFilter = require('../controller/airportFilter');
-var IndexHandler = require('../controller/indexHandler');
-var DownloadHandler = require('../controller/download');
+var AirportFilterCtrl = require('../controller/airportFilterCtrl');
+var IndexCtrl= require('../controller/indexCtrl');
 
 module.exports = function(app){
 
-  app.get('/', IndexHandler);
-  app.get('/api', IndexHandler);
-  app.get('/api/download', DownloadHandler.download);
+  app.get('/', IndexCtrl);
+  app.get('/api', IndexCtrl);
+  app.get('/api/v1', IndexCtrl);
 
-  app.get('/api/airports/', AirportFilter.filterByQuery); // Return all airports or filtered by request parameters (req.query)
-  app.get('/api/airports/:code/:countryCode/:internationFlag/:regionalFlag', AirportFilter.filterByQuery); // Return all airports or filtered by request parameters (req.query)
+  app.get('/api/v1/airports/', AirportFilterCtrl.filterByQuery); // Return all airports or filtered by request parameters (req.query)
+  app.get('/api/v1/airports/:code/:countryCode/:internationFlag/:regionalFlag', AirportFilterCtrl.filterByQuery); // Return all airports or filtered by request parameters (req.query)
 
-  app.get('/api/airports/code/:code', AirportFilter.filterByCode); // Return airports by airport code
-  app.get('/api/airports/country/:countryCode', AirportFilter.filterByCountry); // Return airports by country code
-  app.get('/api/airports/international/:internationalFlag', AirportFilter.filterByInternationalFlag); // Return airports by international_airport flag
-  app.get('/api/airports/regional/:regionalFlag', AirportFilter.filterByRegionalFlag); // Return airports by regional_airport flag
+  app.get('/api/v1/airports/code/:code', AirportFilterCtrl.filterByCode); // Return airports by airport code
+  app.get('/api/v1/airports/country/:countryCode', AirportFilterCtrl.filterByCountry); // Return airports by country code
+  app.get('/api/v1/airports/international/:internationalFlag', AirportFilterCtrl.filterByInternationalFlag); // Return airports by international_airport flag
+  app.get('/api/v1/airports/regional/:regionalFlag', AirportFilterCtrl.filterByRegionalFlag); // Return airports by regional_airport flag
 };

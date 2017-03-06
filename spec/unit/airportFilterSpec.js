@@ -1,7 +1,7 @@
 
-var AirportFilter = require('../../controller/airportFilter');
+var AirportFilter = require('../../controller/airportFilterCtrl');
 
-describe('Test controller/airportFilter.js', function() {
+describe('Test controller/airportFilterCtrl.js', function() {
 
   var req, res, next = function () {
   };
@@ -61,6 +61,7 @@ describe('Test controller/airportFilter.js', function() {
 
 
   it("Should return InvalidParameterError while calling AirportFilter.filterByCode without airport code", function (done) {
+    res.status = function () {return res};
     res.json = function (err) {
       expect(err.name).toBe('InvalidParameterError');
       done();
