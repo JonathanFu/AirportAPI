@@ -54,7 +54,7 @@ Rum `npm test` to start unit test, you can check the test result on console log.
 ```
   1 Test controller/airportFilter.js
     ✓ Should return airport data while calling AirportFilter.filterByQuery with airport code[CAN], country_code[CN], international_airport[true], regional_airport[false] (5 secs)
-.    ✓ Should return airport data while calling AirportFilter.filterByQuery with invalid airport code[XXXX] (4 secs)
+.    ✓ Should return no data while calling AirportFilter.filterByQuery with invalid airport code[XXXX] (4 secs)
 .    ✓ Should return data while calling AirportFilter.filterByCode with airport code[CAD] (4 secs)
 .    ✓ Should return InvalidParameterError while calling AirportFilter.filterByCode without airport code (0.001 sec)
 ```
